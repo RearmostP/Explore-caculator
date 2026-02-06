@@ -1,7 +1,7 @@
-from kivy.app import App
+from kivy.uix.boxlayout import BoxLayout
 from datetime import date
 
-class Root(App):
+class Root(BoxLayout):
     def save_expense(self):
         item = self.root.ids.item.text
         amount = self.root.ids.amount.text

@@ -1,3 +1,4 @@
+from kivy.app import App
 from ui.main_ui import *
 
 class ExpenseApp(App):

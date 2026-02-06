@@ -1,38 +1,43 @@
-canvas.before:
+<Root>:
+    orientation: "vertical"
+    padding: 10
+    spacing: 10
+
+    canvas.before:
     Color:
         rgb: 0.9, 1, 0.9
     Rectangle:
         size: self.size
         pos: self.pos
 
-Label:
-    text: "הוספת הוצאה יומית"
-    font_size: 24
-    color: 0, 0.5, 0, 1
+    Label:
+        text: "הוספת הוצאה יומית"
+        font_size: 24
+        color: 0, 0.5, 0, 1
 
-TextInput:
-    id: item
-    hint_text: "שם ההוצאה"
-    multiline: False
+    TextInput:
+        id: item
+        hint_text: "שם ההוצאה"
+        multiline: False
 
-TextInput:
-    id: amount
-    hint_text: "סכום"
-    input_filter: "float"
-    multiline: False
+    TextInput:
+        id: amount
+        hint_text: "סכום"
+        input_filter: "float"
+        multiline: False
 
-Button:
-    text: "שמור הוצאה"
-    background_color: 0, 0.7, 0, 1
-    on_press: app.save_expense()
+    Button:
+        text: "שמור הוצאה"
+        background_color: 0, 0.7, 0, 1
+        on_press: app.save_expense()
 
-Label:
-    id: total_label
-    text: ""
-    font_size: 18
-    color: 0, 0.4, 0, 1
+    Label:
+        id: total_label
+        text: ""
+        font_size: 18
+        color: 0, 0.4, 0, 1
 
-Button:
-    text: "חשב סך חודשי"
-    background_color: 0, 0.6, 0, 1
-    on_press: app.calc_month()
+    Button:
+        text: "חשב סך חודשי"
+        background_color: 0, 0.6, 0, 1
+        on_press: app.calc_month()
