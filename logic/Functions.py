@@ -34,7 +34,7 @@ class ExpenseLogic:
         )
 
     def create_expense(self, expense_name, list_name):
-        year = current_year()
+        year = str(current_year())
         day_key = current_month_day()
 
         self.ensure_path(year, expense_name, day_key, list_name)
@@ -42,7 +42,7 @@ class ExpenseLogic:
         return year, expense_name, day_key, list_name
 
     def add_item(self, expense_name, list_name, item, amount, payment_type="money"):
-        year = current_year()
+        year = str(current_year())
         day_key = current_month_day()
 
         self.ensure_path(year, expense_name, day_key, list_name)
